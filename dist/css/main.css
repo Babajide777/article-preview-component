@@ -25,12 +25,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2rem;
+  gap: 10rem;
 }
 
 main {
   width: 90%;
-  max-height: 90vh;
+  height: 75vh;
   background-color: white;
   border-radius: 15px;
   display: -webkit-box;
@@ -43,6 +43,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 1.5rem;
 }
 
 main .article-image figure img {
@@ -53,15 +54,21 @@ main .article-image figure img {
 }
 
 main .article-title {
-  margin-top: 1.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
 }
 
 main .article-title .article-title-head h1 {
   color: #48556a;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
 }
 
 main .article-title .artilce-title-body p {
@@ -78,6 +85,7 @@ main .article-footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 1rem;
 }
 
 main .article-footer figure {
@@ -93,9 +101,37 @@ main .article-footer figure img {
   width: 20%;
 }
 
-main .article-footer figure + img {
-  height: 60%;
-  margin-left: 2rem;
+main .article-footer figure figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .article-footer figure figcaption p:first-of-type {
+  color: #48556a;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+main .article-footer figure figcaption p:last-of-type {
+  color: #6d7f97;
+  font-size: 1.15rem;
+}
+
+main .article-footer figure + button {
+  border: none;
+  height: 70%;
+  width: 15%;
+  margin-left: -1.7rem;
+  background-color: #ecf2f8;
+  padding: 0.7rem;
+  border-radius: 50%;
 }
 
 main .article-footer-two {
@@ -129,17 +165,22 @@ main .article-footer-two .social-icons {
   height: 70%;
 }
 
-main .article-footer-two .share-icon {
+main .article-footer-two .share-icon button {
+  border: none;
   border-radius: 50%;
   background-color: #6d7f97;
   padding: 0.7rem;
 }
 
-main .article-footer-two .share-icon img {
+main .article-footer-two .share-icon button img {
   height: 100%;
 }
 
 #hide {
   display: none;
+}
+
+.hide {
+  display: none !important;
 }
 /*# sourceMappingURL=main.css.map */

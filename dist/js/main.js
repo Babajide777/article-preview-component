@@ -15,3 +15,9 @@ if (window.screen.width <= 450) {
     e.currentTarget.parentElement.parentElement.classList.toggle("hide");
   });
 }
+
+button1.addEventListener("click", (e) => {
+  let secondFooter = e.currentTarget.parentElement.nextElementSibling;
+  // e.currentTarget.parentElement.classList.toggle("hide");
+  secondFooter.classList.toggle("hide");
+});

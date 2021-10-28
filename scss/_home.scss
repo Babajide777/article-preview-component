@@ -132,12 +132,40 @@ main {
 }
 
 @media screen and (min-width: 450px) {
+  body {
+    margin-top: 5rem;
+    gap: 0;
+  }
   main {
+    border-radius: 8px;
     width: 70%;
     height: 300px;
-    flex-direction: row;
+    display: grid;
+    grid-template-areas:
+      "im im ti ti"
+      "im im ti ti"
+      "im im ic ic";
   }
-  // .article-image {
-  //   height: 100%;
-  // }
+
+  .article-image {
+    height: 100%;
+    width: 100%;
+    grid-area: im;
+  }
+
+  .article-title {
+    grid-area: ti;
+
+    .article-title-head h1 {
+      font-size: 0.2rem;
+    }
+
+    .artilce-title-body p {
+      font-size: 4rem;
+    }
+  }
+
+  .article-footer {
+    grid-area: ic;
+  }
 }
